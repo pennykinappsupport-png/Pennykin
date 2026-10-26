@@ -1,0 +1,3 @@
+Lottie SVG render: PASS
+No browser errors.
+10604122 bytes in rendered scenes

@@ -1,0 +1,10 @@
+Use case: illustration-story
+Asset type: transparent 2 by 2 animation sprite atlas for Pennykin Play action.
+Input images: image 1 is identity/style reference and original sitting silhouette; image 2 is identity and the precise golden knitted star toy reference.
+Primary request: Create FOUR full-body poses of the exact same cream and lavender kitten Pip, in a strict equal 2x2 grid on genuinely transparent background. No text, no borders, no background, no floor, no baked particles. Every kitten fits wholly inside its cell, no clipping ears/tail/paws, with clear transparent padding around it.
+Identity constraints: preserve the huge dark amber eyes, creamy fluffy fur, lavender ear tips and tail, purple collar, golden paw medallion, hand-painted illustrated shading. Use SAME head size and identical camera perspective in all four poses; approximately frontal three-quarter like reference. Feet baseline at 92% of each cell, centered at 50%, head top about 7%; figure height varies slightly only for crouching.
+Top left: anticipatory crouch, body lowered and compact, hindquarters up slightly, front paws braced, oversized attentive dark pupils, ears alert, looking toward a toy on lower right (no toy yet).
+Top right: midair pounce pose, front paws extended together forward slightly right, body gently elongated, hind paws trailing downward, excited attentive face (no toy in this pose). The entire figure stays centered; floating will be handled by runtime transform.
+Bottom left: landing pose, kitten compresses softly into a low seated squat, front paws holding EXACT same soft golden knitted five-point star toy firmly against chest; happy lively eyes.
+Bottom right: seated joyful finale, hugs EXACT same golden knitted star plush against chest with both paws, head tilted a little, eyes happy and mouth open in a cute excited meow. Feet anchored same baseline as first pose.
+Avoid: extra limbs, duplicated tails, new costume, white halos, shadows outside silhouette, speech, labels, scenery, differing toy colors. Crisp clean antialiased alpha edges. Match original pet's proportions rather than realistic feline proportions.

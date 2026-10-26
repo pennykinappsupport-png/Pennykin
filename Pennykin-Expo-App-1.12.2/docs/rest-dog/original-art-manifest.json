@@ -1,0 +1,22 @@
+{
+  "sit": {
+    "source": "assets/pets/dog.png",
+    "sha256": "a41dd38e5a67a01338a46ab596097e9fe1985ade2ecae64f4382e2766425e4b6"
+  },
+  "blink": {
+    "source": "assets/pets/dog-blink.png",
+    "sha256": "9b751eea2a19946467dafc60bdae3e17d4bd6b5885c4f886f9c452725ccf5207"
+  },
+  "mouth": {
+    "source": "assets/animation/dog-eat.png",
+    "sha256": "9781cb64aaad3e2f12af9f11b1115edc079bf113b87435058825a72cecb5a229"
+  },
+  "sleep": {
+    "source": "assets/animation/dog-rest.png",
+    "sha256": "15febcc82b50ae62050cd6ab204aec18be407a110c4ef6c9bfd7ea7d81d233a6"
+  },
+  "bed": {
+    "source": "assets/items/cozy_cushion.png",
+    "sha256": "5cdda178f20d46348fda99f44c8b3f7441b3e4c109e365e8c9e7607f12c66793"
+  }
+}

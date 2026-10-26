@@ -1,0 +1,12 @@
+✔ dog Rest retains every original PNG byte and the five independent named layer groups (16.574603ms)
+✔ sleep loop has only the closed sleeping head and torso; upright/awake artwork stays at zero opacity (13.436473ms)
+✔ actual DogRest JSX preloads one native composition, uses layout fallback and selects a looping 30-frame segment (1122.272745ms)
+✔ a preload failure is reported on entering Rest instead of waiting silently forever (385.602267ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3760.938549

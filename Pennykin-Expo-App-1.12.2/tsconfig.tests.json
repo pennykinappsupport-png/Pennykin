@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noUncheckedIndexedAccess": true,
+    "outDir": ".test-build",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src/petAnimationMachine.ts",
+    "src/petPose.ts",
+    "src/careChoreography.ts",
+    "src/feedChoreography.ts",
+    "src/analytics.ts",
+    "src/types.ts",
+    "tests/petAnimationMachine.test.ts",
+    "tests/petPose.test.ts",
+    "tests/careChoreography.test.ts",
+    "tests/feedChoreography.test.ts",
+    "tests/analytics.test.ts",
+    "src/vetVisit.ts",
+    "tests/vetVisit.test.ts",
+    "src/playChoreography.ts",
+    "tests/playChoreography.test.ts",
+    "src/restChoreography.ts",
+    "src/careMutationQueue.ts",
+    "tests/restAnimation.test.ts",
+    "src/animalPlayChoreography.ts",
+    "tests/animalPlayChoreography.test.ts",
+    "src/cleanChoreography.ts",
+    "tests/cleanChoreography.test.ts",
+    "src/bathPlayback.ts",
+    "src/dogRest.ts",
+    "tests/dogRest.test.ts",
+    "src/database.ts",
+    "src/budget.ts",
+    "src/useFinancialQueries.ts",
+    "src/game.ts",
+    "src/rewards.ts"
+  ]
+}

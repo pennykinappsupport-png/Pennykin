@@ -1,0 +1,1 @@
+PASS: Actual native-bundled JSON rendered all 57 authored frames in Lottie Web. No browser errors.

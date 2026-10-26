@@ -1,0 +1,41 @@
+const assert=require('node:assert/strict'),test=require('node:test');
+const {execFileSync}=require('node:child_process');
+for(const timezone of ['America/New_York','America/Los_Angeles','Europe/Berlin','Asia/Shanghai','UTC'])test(`calendar, budget and timezone integrity in ${timezone}`,()=>{
+ execFileSync(process.execPath,['-e',`
+ const assert=require('node:assert/strict');
+ const date=require('./.test-build/src/date.js');
+ const {getBudgetMetrics}=require('./.test-build/src/budget.js');
+ const {getBudgetActuals,getSpendingSummary}=require('./.test-build/src/transactionQueries.js');
+ const {getPeriodOffsetForDate}=require('./.test-build/src/analytics.js');
+ const {sqliteFixture}=require('./tests/helpers/sqliteFixture.cjs');
+ const {migrateDbIfNeeded}=require('./.test-build/src/database.js');
+ (async()=>{
+ for(const [a,b,d]of [['2026-03-07','2026-03-08',1],['2026-03-02','2026-03-08',6],['2026-10-31','2026-11-01',1],['2026-03-28','2026-03-29',1],['2024-02-28','2024-03-01',2],['2025-12-31','2026-01-01',1]])assert.equal(date.daysBetween(a,b),d);
+ assert.equal(date.calendarDayDifference('2026-03-08','2026-03-07'),-1);
+ assert.equal(date.daysBetween('2026-03-08','2026-03-07'),0);
+ assert.equal(date.todayKey(date.parseDateKey('2026-03-08')),'2026-03-08');
+ assert.equal(date.addCalendarDays('2024-02-28',1),'2024-02-29');
+ assert.equal(date.addCalendarDays('2026-03-07',1),'2026-03-08');
+ assert.throws(()=>date.parseDateKey('2026-02-30'));assert.throws(()=>date.parseDateKey('2026-3-8'));
+ assert.equal(date.weekStartKey(new Date(2026,2,8)),'2026-03-02');
+ assert.equal(getPeriodOffsetForDate('day',new Date(2026,2,7),new Date(2026,2,8)),-1);
+ const {db,sqlite,close}=sqliteFixture();await migrateDbIfNeeded(db);
+ const actuals=await getBudgetActuals(db,new Date(2026,2,8,15));
+ const m=getBudgetMetrics({financialActuals:actuals,settings:{weeklyBudgetCents:7000},categoryBudgets:[],reservedExpenses:[],savingsGoal:null});
+ assert.equal(m.elapsedDays,7);assert.equal(m.remainingDays,1);assert.equal(m.safeTodayCents,7000);
+ const fall=await getBudgetActuals(db,new Date(2026,10,1,15));
+ assert.equal(getBudgetMetrics({financialActuals:fall,settings:{weeklyBudgetCents:7000},categoryBudgets:[],reservedExpenses:[],savingsGoal:null}).remainingDays,1);
+ const instant=new Date('2026-03-08T07:30:00Z');
+ sqlite.prepare('INSERT INTO transactions(amount_cents,category,note,need_want,transaction_date,created_at) VALUES(100,?, ?, ?, ?, ?)').run('Food','Food','Need','2026-03-08',instant.toISOString());
+ const summary=await getSpendingSummary(db,{startKey:'2026-03-08',endExclusiveKey:'2026-03-09'},'day');
+ assert.equal(summary.buckets[String(Math.floor(instant.getHours()/4))].totalCents,100);
+ assert.equal(sqlite.prepare('SELECT transaction_date FROM transactions').get().transaction_date,'2026-03-08');
+ const before=date.calendarContextKey(instant);const old=process.env.TZ;process.env.TZ=old==='Asia/Shanghai'?'America/New_York':'Asia/Shanghai';
+ assert.notEqual(date.calendarContextKey(instant),before);
+ assert.equal(sqlite.prepare('SELECT transaction_date FROM transactions').get().transaction_date,'2026-03-08');
+ const after=await getSpendingSummary(db,{startKey:'2026-03-08',endExclusiveKey:'2026-03-09'},'day');
+ assert.equal(after.buckets[String(Math.floor(instant.getHours()/4))].totalCents,100);
+ close();
+ })().catch(e=>{console.error(e);process.exitCode=1});
+ `],{cwd:process.cwd(),env:{...process.env,TZ:timezone},stdio:'pipe'});
+});

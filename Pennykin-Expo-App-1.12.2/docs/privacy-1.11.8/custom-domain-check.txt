@@ -1,0 +1,7 @@
+Custom-domain update: October 18, 2026 (America/New_York)
+Privacy: https://pennykin.app/privacy/
+Support: https://pennykin.app/support/
+TypeScript check: PASS
+Privacy/support tests: 4 PASS, 0 FAIL
+Both pages previously verified HTTP 200 without authentication.
+Native build/device validation remains outstanding.

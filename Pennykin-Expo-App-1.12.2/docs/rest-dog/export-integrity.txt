@@ -1,0 +1,2 @@
+ios: PASS; Hermes bundle 7446325 bytes and 70 assets present; SHA-256 de52b1e662b0b89df44230f3351b8ae7658a1d6d41f44af4175e8e6b51b9f07e
+android: PASS; Hermes bundle 7451448 bytes and 70 assets present; SHA-256 664d2c6be3d2a02fb9cbaab886de3bd02cffe5a0caa077c20850e978346c78fb

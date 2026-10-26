@@ -1,0 +1,11 @@
+Use case: precise-object-edit.
+Asset type: transparent animation sprite atlas, landscape 3 columns by 2 rows (six equal square cells).
+Input 1: existing Pip animation atlas, identity/style and action reference. Input 2: the EXACT original idle kitten, final stance reference.
+Create six clean frames of this same cream-and-lavender kitten in a strict equal 3x2 grid. Keep original amber eyes, lavender tail/ear tips, purple collar and golden round paw medallion. SAME face design, head scale, camera angle, centered horizontal position and grounded paw baseline in all cells; no figure may cross a cell boundary. Leave at least 8% transparent cell padding. Frame order left to right, top then bottom:
+1. Very slight anticipatory crouch from original idle (NOT deep squat): attentive wide pupils, shoulders lower just a little, paws ready.
+2. Forward midair pounce with both forepaws reaching to catch; stretched torso slightly, hind paws trailing.
+3. Seated landing/embrace posture, softly compressed, both empty forepaws curved inward around an INVISIBLE 5-point toy position at lower chest.
+4. Same seated stance and identical head position as frame 3, joyful face, forepaws hugging that INVISIBLE toy position closer to chest, open happy meow mouth.
+5. Intermediate release: same head/body as frame 4, forepaws uncurl and lower halfway toward the floor, small contented closed-mouth smile.
+6. EXACT original idle pose from input 2, same head tilt, forelegs straight, paws back on floor, calm smile.
+CRITICAL: NO STAR TOY and NO OTHER PROP anywhere in ANY of these frames; toys are drawn separately at runtime, so fill their former position with natural cream chest fur, and draw the paws fully and correctly. No sparkles, floor, shadows, backgrounds, labels or speech. Round golden collar medallion remains (not a star). Real transparent RGBA background, smooth clean alpha edges. Avoid extra limbs, duplicate ears/tails and character redesign. Cells 3–6 must be an especially consistent continuous recovery sequence.

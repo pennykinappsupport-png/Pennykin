@@ -1,0 +1,22 @@
+{
+  "sit": {
+    "source": "assets/pets/cat.png",
+    "sha256": "184e7c1ac6195d4c5b33ff2a03a53a491a68b773799f5111449a301d5b8428eb"
+  },
+  "blink": {
+    "source": "assets/pets/cat-blink.png",
+    "sha256": "d3aa73628eb19617d80434f7a8b83afab86248665b15710dd59a45fc32d23370"
+  },
+  "mouth": {
+    "source": "assets/animation/cat-eat.png",
+    "sha256": "8fb8f7a2493ce3109041ebac0555f582872be1523b900e36b3547c2e13855756"
+  },
+  "sleep": {
+    "source": "assets/animation/cat-rest.png",
+    "sha256": "512da6f2e1d76f93e036d5a05bf0e2d4d5053a6dc45ebb6852105d7b48c198a1"
+  },
+  "bed": {
+    "source": "assets/items/cozy_cushion.png",
+    "sha256": "5cdda178f20d46348fda99f44c8b3f7441b3e4c109e365e8c9e7607f12c66793"
+  }
+}

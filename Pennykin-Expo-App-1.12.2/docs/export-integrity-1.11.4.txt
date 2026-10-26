@@ -1,0 +1,2 @@
+PASS: 128 exported PNGs decoded; all 60 Clean PNGs present byte-for-byte; 130 total asset references exist.
+PASS: Hermes compiler successfully decoded 2219634-byte bytecode bundle.

@@ -1,0 +1,28 @@
+import type { ImageSourcePropType } from "react-native";
+
+export const ITEM_IMAGES: Record<string, ImageSourcePropType> = {
+  lavender_wall: require("../assets/items/lavender_wall.png"),
+  sunset_wall: require("../assets/items/sunset_wall.png"),
+  mint_wall: require("../assets/items/mint_wall.png"),
+  midnight_wall: require("../assets/items/midnight_wall.png"),
+  wood_floor: require("../assets/items/wood_floor.png"),
+  cloud_rug: require("../assets/items/cloud_rug.png"),
+  star_rug: require("../assets/items/star_rug.png"),
+  round_window: require("../assets/items/round_window.png"),
+  rainy_window: require("../assets/items/rainy_window.png"),
+  cozy_cushion: require("../assets/items/cozy_cushion.png"),
+  reading_chair: require("../assets/items/reading_chair.png"),
+  tiny_table: require("../assets/items/tiny_table.png"),
+  leaf_plant: require("../assets/items/leaf_plant.png"),
+  star_plush: require("../assets/items/star_plush.png"),
+  moon_lamp: require("../assets/items/moon_lamp.png"),
+  seven_day_banner: require("../assets/items/seven_day_banner.png"),
+  fourteen_day_lantern: require("../assets/items/fourteen_day_lantern.png"),
+  thirty_day_arch: require("../assets/items/thirty_day_arch.png"),
+  lavender_scarf: require("../assets/items/lavender_scarf.png"),
+  gold_crown: require("../assets/items/gold_crown.png"),
+  pumpkin_lamp: require("../assets/items/pumpkin_lamp.png"),
+  snow_globe: require("../assets/items/snow_globe.png"),
+  premium_treat: require("../assets/items/premium_treat.png"),
+  mystery_gift: require("../assets/items/mystery_gift.png"),
+};

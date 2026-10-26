@@ -1,0 +1,1 @@
+PASS: all 60 Clean PNGs match exported resource bytes; 128 exported images decoded.

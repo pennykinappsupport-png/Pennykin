@@ -1,0 +1,22 @@
+{
+  "sit": {
+    "source": "assets/pets/rabbit.png",
+    "sha256": "b51499384b9dca48073aecdcd9f902691b69615c842e08929ec6f4480d56f213"
+  },
+  "blink": {
+    "source": "assets/pets/rabbit-blink.png",
+    "sha256": "6cd927e4f4cc6f126a95804bddd69166a2f40cc67d515e28b26b7ba028852942"
+  },
+  "mouth": {
+    "source": "assets/animation/rabbit-eat.png",
+    "sha256": "1506d8e2f8df3b8bac6ceb23d2bc7c3a3225754a38e21c19820d03b876ba6df9"
+  },
+  "sleep": {
+    "source": "assets/animation/rabbit-rest.png",
+    "sha256": "6856c273cb9920c5ea5e041d1222566ab8c1f01871d2687663b6cfbe0de389eb"
+  },
+  "bed": {
+    "source": "assets/items/cozy_cushion.png",
+    "sha256": "5cdda178f20d46348fda99f44c8b3f7441b3e4c109e365e8c9e7607f12c66793"
+  }
+}

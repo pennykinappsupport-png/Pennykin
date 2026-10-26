@@ -1,0 +1,17 @@
+{
+  "programs": [],
+  "streams": [
+    {
+      "codec_type": "video",
+      "r_frame_rate": "15/1",
+      "duration": "7.800000",
+      "nb_frames": "117"
+    },
+    {
+      "codec_type": "audio",
+      "r_frame_rate": "0/0",
+      "duration": "7.800000",
+      "nb_frames": "169"
+    }
+  ]
+}
